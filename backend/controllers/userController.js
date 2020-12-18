@@ -26,7 +26,17 @@ const authUser = asyncHandler(async (req, res) => {
 // @route  GET /api/users/profile
 // @access  Private
 const getUserProfile = asyncHandler(async (req, res) => {
-  res.send('Success')
+  const user = await User.findById(req.user._id)
+
+  if (user) {
+    res.json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+    })
+  } else {
+  }
 })
 
 export { authUser, getUserProfile }
