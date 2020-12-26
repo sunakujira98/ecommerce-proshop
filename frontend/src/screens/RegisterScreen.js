@@ -31,9 +31,10 @@ const RegisterScreen = ({ location, history }) => {
     e.preventDefault()
     if (password !== confirmPassword) {
       setMessage('Password do not match')
+    } else {
+      // DISPATCH REGISTER
+      dispatch(register(name, email, password))
     }
-    // DISPATCH REGISTER
-    dispatch(register(name, email, password))
   }
 
   return (
@@ -84,7 +85,7 @@ const RegisterScreen = ({ location, history }) => {
         </Form.Group>
 
         <Button type='submit' variant='primary'>
-          Sign In
+          Register
         </Button>
       </Form>
 

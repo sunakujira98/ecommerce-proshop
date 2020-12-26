@@ -31,6 +31,7 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password)
 }
 
+// Pre save method, comes from mongodb, return promise
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) {
     next()
