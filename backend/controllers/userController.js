@@ -117,8 +117,8 @@ const getUsers = asyncHandler(async (req, res) => {
   res.json(users)
 })
 
-// @desc  GET all users
-// @route  GET /api/users
+// @desc  DELETE user
+// @route  DELETE /api/users/:id
 // @access  Private/Admin
 const deleteUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id)
