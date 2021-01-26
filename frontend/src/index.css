@@ -36,14 +36,14 @@ h3 {
 }
 
 .carousel img {
-  display: block;
+  height: 300px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  padding: 100px;
-  margin: auto;
-  border-radius: 50%;
 }
+
 .carousel a {
   margin: 0 auto;
 }
